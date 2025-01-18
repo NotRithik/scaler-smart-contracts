@@ -1,0 +1,19 @@
+{
+  "name": "scaler-smart-contracts",
+  "version": "1.0.0",
+  "description": "Welcome to the project repository for the Scaler School of Technology's **Smart Contracts Course**. This repository is designed as a template for your final project submission. Each group is expected to fork this repository, create a new branch, and make contributions to their fork before submitting their work via a pull request.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}

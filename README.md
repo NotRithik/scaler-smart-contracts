@@ -6,7 +6,7 @@ Welcome to the project repository for the Scaler School of Technology's **Smart 
 
 ## 📖 Project Overview
 
-This repository contains the final project submission for **Group <Your Group Number>**. The project is part of the Smart Contracts Course and is designed to apply the knowledge you have gained throughout the course.
+This repository contains the final project submission for **Group 1**. The project is part of the Smart Contracts Course and is designed to apply the knowledge you have gained throughout the course.
 
 Each group has the freedom to:
 - **Choose any blockchain** platform (e.g., Ethereum, Solana, Polygon, etc.).
@@ -18,9 +18,9 @@ Each group has the freedom to:
 
 > **Note**: Replace the placeholders below with your actual project details.
 
-- **Project Name**: _Enter your project name here._
-- **Blockchain Platform**: _Specify the blockchain platform you are using (e.g., Ethereum, Solana, Polygon, etc.)._
-- **Network**: _Specify the network you are deploying to (e.g., Mainnet, Goerli Testnet, etc.)._
+- **Project Name**: Decentralised_Voting_System
+- **Blockchain Platform**: Ethereum
+- **Network**: Sepolia TestNet
 - **Deployed Smart Contract Address**: _Provide the address of your deployed smart contract._
 - **Wallet Address**: _Provide the wallet address used for deploying the contract._
 - **Frontend Repository/Code**:

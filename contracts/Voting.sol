@@ -1,8 +1,9 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.8 <0.9;
+pragma solidity >=0.8.0 <0.9.0;
+
 import "zokrates_voting/verifier.sol";
 
-contract Voting is Verifier{
+contract Voting is Verifier {
     struct Candidate {
         uint id;
         string name;
@@ -19,8 +20,22 @@ contract Voting is Verifier{
     mapping(address => Voter) public voters;
     uint public candidatesCount;
 
+    uint public votingStartTime;
+    uint public votingEndTime;
+
     modifier onlyAdmin() {
         require(msg.sender == admin, "Not authorized");
+        _;
+    }
+
+    modifier duringVoting() {
+        require(block.timestamp >= votingStartTime, "Voting has not started yet");
+        require(block.timestamp <= votingEndTime, "Voting has ended");
+        _;
+    }
+
+    modifier votingNotStarted() {
+        require(block.timestamp < votingStartTime, "Voting already started");
         _;
     }
 
@@ -28,9 +43,16 @@ contract Voting is Verifier{
         admin = msg.sender;
     }
 
-    function addCandidate(string memory name) public onlyAdmin {
+    function addCandidate(string memory name) public onlyAdmin votingNotStarted {
         candidatesCount++;
         candidates[candidatesCount] = Candidate(candidatesCount, name, 0);
+    }
+
+    function setVotingTimes(uint _startTime, uint _endTime) public onlyAdmin votingNotStarted {
+        require(_startTime > block.timestamp, "Start time must be in the future");
+        require(_endTime > _startTime, "End time must be after start time");
+        votingStartTime = _startTime;
+        votingEndTime = _endTime;
     }
 
     function voteWithProof(
@@ -39,7 +61,7 @@ contract Voting is Verifier{
         uint[2][2] memory b,
         uint[2] memory c,
         uint[1] memory input
-    ) public {
+    ) public duringVoting {
         require(!voters[msg.sender].hasVoted, "You have already voted");
         require(candidateId > 0 && candidateId <= candidatesCount, "Invalid candidate");
 
@@ -60,8 +82,26 @@ contract Voting is Verifier{
         candidates[candidateId].voteCount++;
     }
 
-
     function getCandidate(uint id) public view returns (Candidate memory) {
         return candidates[id];
+    }
+
+    function getVotingStatus() public view returns (string memory) {
+        if (block.timestamp < votingStartTime) {
+            return "Voting has not started yet";
+        } else if (block.timestamp > votingEndTime) {
+            return "Voting has ended";
+        } else {
+            return "Voting is ongoing";
+        }
+    }
+
+    // New function for real-time vote tally
+    function getVoteTally() public view returns (Candidate[] memory) {
+        Candidate[] memory candidateList = new Candidate[](candidatesCount);
+        for (uint i = 1; i <= candidatesCount; i++) {
+            candidateList[i - 1] = candidates[i];
+        }
+        return candidateList;
     }
 }

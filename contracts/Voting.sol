@@ -18,6 +18,8 @@ contract Voting is Verifier {
     address public admin;
     mapping(uint => Candidate) public candidates;
     mapping(address => Voter) public voters;
+    mapping(address => bool) public isAdmin;
+    mapping(address => bool) public isWhitelistedVoter;
     uint public candidatesCount;
 
     uint public votingStartTime;
@@ -26,6 +28,33 @@ contract Voting is Verifier {
     modifier onlyAdmin() {
         require(msg.sender == admin, "Not authorized");
         _;
+    }
+
+    function addAdmin(address _admin) public onlyAdmin {
+        require(_admin != address(0), "Invalid address");
+        isAdmin[_admin] = true;
+    }
+
+    function removeAdmin(address _admin) public onlyAdmin {
+        require(_admin != address(0), "Invalid address");
+        require(isAdmin[_admin], "Address is not an admin");
+        isAdmin[_admin] = false;
+    }
+
+    modifier onlyWhitelisted() {
+        require(isWhitelistedVoter[msg.sender], "Not a whitelisted voter");
+        _;
+    }
+
+    function whitelistVoter(address _voter) public onlyAdmin {
+        require(_voter != address(0), "Invalid address");
+        isWhitelistedVoter[_voter] = true;
+    }
+
+    function removeVoterFromWhitelist(address _voter) public onlyAdmin {
+        require(_voter != address(0), "Invalid address");
+        require(isWhitelistedVoter[_voter], "Voter not in whitelist");
+        isWhitelistedVoter[_voter] = false;
     }
 
     modifier duringVoting() {
@@ -61,7 +90,7 @@ contract Voting is Verifier {
         uint[2][2] memory b,
         uint[2] memory c,
         uint[1] memory input
-    ) public duringVoting {
+    ) public onlyWhitelisted duringVoting {
         require(!voters[msg.sender].hasVoted, "You have already voted");
         require(candidateId > 0 && candidateId <= candidatesCount, "Invalid candidate");
 

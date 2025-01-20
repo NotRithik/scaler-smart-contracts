@@ -3,7 +3,7 @@
 ## Overview
 
 This Solidity smart contract implements a simple crowdfunding platform where contributors can donate funds to a campaign. If the campaign reaches its target amount, the manager can create spending requests. Contributors can vote on these requests, and once a majority approves, the funds can be transferred to the recipient.
-
+ 
 ## Features
 
 - **Contribution**: Contributors can donate to the campaign.

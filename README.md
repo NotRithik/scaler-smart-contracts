@@ -21,17 +21,17 @@ Each group has the freedom to:
 - **Project Name**: Decentralised_Voting_System
 - **Blockchain Platform**: Ethereum
 - **Network**: Sepolia TestNet
-- **Deployed Smart Contract Address**: _Provide the address of your deployed smart contract._
-- **Wallet Address**: _Provide the wallet address used for deploying the contract._
+- **Deployed Smart Contract Address**: 0x741E7bD6dfEC1bf24852d0f8F24Cdf43AD2D882B
+- **Wallet Address**: 0x4E0397B27F69331734BE57f965263f9724afE60E
 - **Frontend Repository/Code**:
-  - _Provide the relative path to the frontend code directory in this repository._
+  - ./frontendV2
   - _If hosted externally, provide the link to the frontend repository._
 - **Team Members**:
-  1. **Name (GitHub ID)**: _List each team member and their GitHub ID here._
-  2. **Name (GitHub ID)**: _Add additional members if applicable._
+  1. **Name (GitHub ID)**: Medha Shree(https://github.com/Medha170)
+  2. **Name (GitHub ID)**: Riya Bhurse(https://github.com/RiyaBhurse)
   3. **Name (GitHub ID)**: _Optional third member._
 - **Project Description**:  
-  _Provide a brief description of your project, its purpose, and the problem it aims to solve._
+  The Decentralized Voting System is a blockchain-based platform designed to conduct secure, transparent, and tamper-proof elections. By leveraging the immutability and distributed nature of blockchain, this system ensures that every vote is recorded accurately and cannot be altered. Voters can cast their ballots anonymously, and election results are verifiable by anyone, fostering trust in the voting process.
 
 ---
 

@@ -16,22 +16,20 @@ Each group has the freedom to:
 
 ## 📋 Project Details
 
-> **Note**: Replace the placeholders below with your actual project details.
+ 
 
-- **Project Name**: _Enter your project name here._
-- **Blockchain Platform**: _Specify the blockchain platform you are using (e.g., Ethereum, Solana, Polygon, etc.)._
-- **Network**: _Specify the network you are deploying to (e.g., Mainnet, Goerli Testnet, etc.)._
-- **Deployed Smart Contract Address**: _Provide the address of your deployed smart contract._
-- **Wallet Address**: _Provide the wallet address used for deploying the contract._
-- **Frontend Repository/Code**:
-  - _Provide the relative path to the frontend code directory in this repository._
-  - _If hosted externally, provide the link to the frontend repository._
+- **Project Name**: _CrowdFunding Contract_
+- **Blockchain Platform**: _Ethereum_
+- **Network**: _TestNet._
+- **Deployed Smart Contract Address**: _0xd81BBA37851a547B50f9123B2FC092292FD88aC4_
+- **Wallet Address**: _0x654778D430373edc566926313449E41C6531C29E_
+ 
 - **Team Members**:
-  1. **Name (GitHub ID)**: _List each team member and their GitHub ID here._
-  2. **Name (GitHub ID)**: _Add additional members if applicable._
-  3. **Name (GitHub ID)**: _Optional third member._
+  1. **Name (GitHub ID)**: _Siddharth R   , github -> https://github.com/isid555
+  
 - **Project Description**:  
-  _Provide a brief description of your project, its purpose, and the problem it aims to solve._
+  This Solidity smart contract implements a simple crowdfunding platform where contributors can donate funds to a campaign. If the campaign reaches its target amount, the manager can create spending requests. Contributors can vote on these requests, and once a majority approves, the funds can be transferred to the recipient.
+
 
 ---
 

@@ -1,0 +1,22 @@
+{
+  "inputs": [
+    {
+      "name": "candidateId",
+      "public": false,
+      "type": "field"
+    },
+    {
+      "name": "validCandidateId",
+      "public": true,
+      "type": "field"
+    },
+    {
+      "name": "totalCandidates",
+      "public": true,
+      "type": "field"
+    }
+  ],
+  "output": {
+    "type": "field"
+  }
+}

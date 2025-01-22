@@ -6,7 +6,7 @@ Welcome to the project repository for the Scaler School of Technology's **Smart 
 
 ## 📖 Project Overview
 
-This repository contains the final project submission for **Group <Your Group Number>**. The project is part of the Smart Contracts Course and is designed to apply the knowledge you have gained throughout the course.
+This repository contains the final project submission for **Group 1**. The project is part of the Smart Contracts Course and is designed to apply the knowledge you have gained throughout the course.
 
 Each group has the freedom to:
 - **Choose any blockchain** platform (e.g., Ethereum, Solana, Polygon, etc.).
@@ -18,20 +18,20 @@ Each group has the freedom to:
 
 > **Note**: Replace the placeholders below with your actual project details.
 
-- **Project Name**: _Enter your project name here._
-- **Blockchain Platform**: _Specify the blockchain platform you are using (e.g., Ethereum, Solana, Polygon, etc.)._
-- **Network**: _Specify the network you are deploying to (e.g., Mainnet, Goerli Testnet, etc.)._
-- **Deployed Smart Contract Address**: _Provide the address of your deployed smart contract._
-- **Wallet Address**: _Provide the wallet address used for deploying the contract._
+- **Project Name**: Decentralised_Voting_System
+- **Blockchain Platform**: Ethereum
+- **Network**: Sepolia TestNet
+- **Deployed Smart Contract Address**: 0x741E7bD6dfEC1bf24852d0f8F24Cdf43AD2D882B
+- **Wallet Address**: 0x4E0397B27F69331734BE57f965263f9724afE60E
 - **Frontend Repository/Code**:
-  - _Provide the relative path to the frontend code directory in this repository._
+  - ./frontendV2
   - _If hosted externally, provide the link to the frontend repository._
 - **Team Members**:
-  1. **Name (GitHub ID)**: _List each team member and their GitHub ID here._
-  2. **Name (GitHub ID)**: _Add additional members if applicable._
+  1. **Name (GitHub ID)**: Medha Shree(https://github.com/Medha170)
+  2. **Name (GitHub ID)**: Riya Bhurse(https://github.com/RiyaBhurse)
   3. **Name (GitHub ID)**: _Optional third member._
 - **Project Description**:  
-  _Provide a brief description of your project, its purpose, and the problem it aims to solve._
+  The Decentralized Voting System is a blockchain-based platform designed to conduct secure, transparent, and tamper-proof elections. By leveraging the immutability and distributed nature of blockchain, this system ensures that every vote is recorded accurately and cannot be altered. Voters can cast their ballots anonymously, and election results are verifiable by anyone, fostering trust in the voting process.
 
 ---
 
